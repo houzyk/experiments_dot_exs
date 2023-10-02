@@ -34,19 +34,20 @@ defmodule CollectionsExerciseTest do
     assert Collections.Exercises.even([2, 2, 2, 2]) == [2, 2, 2, 2]
   end
 
-  # test "long_word 1" do
-  #   assert Collections.Exercises.long_word(["we", "the", "people"]) == "people"
-  # end
+  test "long_word 1" do
+    assert Collections.Exercises.long_word(["we", "the", "people"]) == "people"
+  end
 
-  # test "long_word 2" do
-  #   assert Collections.Exercises.long_word([]) == []
-  # end
+  test "long_word 2" do
+    assert Collections.Exercises.long_word(["ok"]) == "ok"
+  end
 
-  # test "long_word 3" do
-  #   assert Collections.Exercises.long_word(["ok", "ok", "KO"]) == "ok"
-  # end
+  test "long_word 3" do
+    assert Collections.Exercises.long_word(["ok", "ok", "KO"]) == "KO"
+  end
 
-  # test "long_word 4" do
-  #   assert Collections.Exercises.long_word(["OK", "OK", "123"]) == "123"
-  # end
+  test "long_word 4" do
+    assert Collections.Exercises.long_word(["OK", "OK", "123"]) == "123"
+  end
+
 end

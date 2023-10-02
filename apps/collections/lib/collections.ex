@@ -127,6 +127,7 @@ end
 
     """
     def long_word(words) when is_list(words) do
+      hd Enum.sort(words, &(String.length(&1) > String.length(&2)))
     end
 
     @doc """
@@ -138,6 +139,6 @@ end
     %{"30-40" => ["Sean", "Sarah"], "50-60" => ["Darren"]}
     """
 
-    def age_groups(persons) do
+    def age_groups(persons) when is_list(persons) do
     end
   end
