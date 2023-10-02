@@ -23,7 +23,8 @@ erl_crash.dump
 /tmp/
 
 # Ignore package tarball (built via "mix hex.build").
-concurrency-*.tar
 basics-*.tar
+collections-*.tar
+concurrency-*.tar
 
 cached_dot_formatter
