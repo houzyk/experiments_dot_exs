@@ -50,4 +50,22 @@ defmodule CollectionsExerciseTest do
     assert Collections.Exercises.long_word(["OK", "OK", "123"]) == "123"
   end
 
+    test "age_groups 1" do
+    assert Collections.Exercises.age_groups([%{name: "Sean", age: 33}, %{name: "Sarah", age: 33}, %{name: "Darren", age: 51}]) == %{"30-40" => ["Sean", "Sarah"], "50-60" => ["Darren"]}
+  end
+
+  test "age_groups 2" do
+    assert Collections.Exercises.age_groups([]) == %{}
+  end
+
+  test "age_groups 3" do
+    test_data = [%{name: "Sean", age: 33}, %{name: "Sarah", age: 33}, %{name: "Darren", age: 51}, %{name: "Mark", age: 1}]
+    expected = %{"30-40" => ["Sean", "Sarah"], "50-60" => ["Darren"], "0-10" => ["Mark"]}
+    assert Collections.Exercises.age_groups(test_data) == expected
+  end
+
+  test "age_groups 4" do
+    assert Collections.Exercises.age_groups([%{name: "Sean", age: 0}]) == %{"0-10" => ["Sean"]}
+  end
+
 end
